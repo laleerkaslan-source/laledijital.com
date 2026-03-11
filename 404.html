@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayfa Bulunamadı | Lale Dijital</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Lale Dijital" width="55" height="55"></a>
+      <nav><ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="iletisim.html" class="btn btn-primary">İletişim</a></li>
+      </ul></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="container" style="text-align: center;">
+      <h1 style="font-size: 6rem; color: var(--gold); margin-bottom: 16px;">404</h1>
+      <h2 style="margin-bottom: 16px;">Sayfa Bulunamadı</h2>
+      <p style="margin-bottom: 40px;">Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Ana Sayfaya Dön</a>
+        <a href="iletisim.html" class="btn btn-outline">İletişime Geç</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lale Dijital. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+  <script>const m=document.getElementById('menuToggle');const n=document.getElementById('navLinks');m.addEventListener('click',()=>n.classList.toggle('active'));</script>
+</body>
+</html>

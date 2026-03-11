@@ -1,0 +1,25 @@
+# Lale Dijital
+
+> Lale Dijital, Türkiye merkezli profesyonel bir dijital ajans olup web sitesi tasarımı, SEO optimizasyonu, Google Ads reklam yönetimi, dijital pazarlama, sosyal medya yönetimi ve yapay zeka destekli özel yazılım geliştirme hizmetleri sunmaktadır.
+
+## Hizmetler
+
+- [Web Sitesi Tasarımı](https://laledijital.com/hizmetler.html#web-tasarim): Modern, hızlı, SEO uyumlu ve mobil dostu kurumsal web sitesi, e-ticaret sitesi ve landing page tasarımı.
+- [SEO Optimizasyonu](https://laledijital.com/hizmetler.html#seo): Anahtar kelime araştırması, teknik SEO, sayfa içi/dışı SEO ve yerel SEO ile Google'da üst sıralara çıkma.
+- [Google Ads Yönetimi](https://laledijital.com/hizmetler.html#google-ads): Arama ağı, görüntülü reklam, alışveriş ve YouTube kampanyaları yönetimi.
+- [Dijital Pazarlama](https://laledijital.com/hizmetler.html#dijital-pazarlama): Sosyal medya yönetimi, içerik pazarlama, e-posta pazarlama ve marka stratejisi.
+- [Yapay Zeka Çözümleri](https://laledijital.com/hizmetler.html#yapay-zeka): AI destekli kişiye özel program, chatbot, otomasyon ve akıllı yazılım çözümleri.
+- [Özel Yazılım ve Oyun Geliştirme](https://laledijital.com/hizmetler.html#yazilim): Web uygulaması, API, mobil uygulama ve interaktif oyun geliştirme.
+
+## İletişim
+
+- Web: https://laledijital.com
+- E-posta: lale@laledijital.com
+- Telefon: +90 506 397 7306
+- Instagram: https://www.instagram.com/laledijital
+- LinkedIn: https://linkedin.com/company/lale-digital
+- Facebook: https://facebook.com/laledigitaltr
+
+## Hakkımızda
+
+Lale Dijital olarak "Siz büyürseniz biz büyürüz" prensibiyle çalışıyoruz. İşletmelerin dijital dünyadaki başarısını en üst seviyeye taşımak amacıyla en güncel teknolojileri ve yapay zeka araçlarını kullanıyoruz. Hızlı teslimat, 7/24 destek ve uygun fiyat politikamızla fark yaratıyoruz.

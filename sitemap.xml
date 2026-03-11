@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://laledijital.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/hizmetler.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/hizmetler.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/services.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/hakkimizda.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/hakkimizda.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/about.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/blog.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/contact.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Blog Posts TR -->
+  <url>
+    <loc>https://laledijital.com/blog/basarili-google-ads-kampanyalari.html</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog/seo-trendleri-2024.html</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog/yapay-zeka-isletmeler.html</loc>
+    <lastmod>2024-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog/web-sitesi-tasarimi-ipuclari.html</loc>
+    <lastmod>2024-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog/sosyal-medya-stratejisi.html</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/blog/web-sitesi-guvenligi.html</loc>
+    <lastmod>2024-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- English Pages -->
+  <url>
+    <loc>https://laledijital.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/hizmetler.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/hakkimizda.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/en/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/blog.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laledijital.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laledijital.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://laledijital.com/iletisim.html"/>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
