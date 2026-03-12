@@ -146,7 +146,7 @@
         <!-- Contact Form -->
         <div class="contact-form">
           <h3 style="margin-bottom: 24px; font-family: var(--font-main);">Mesaj Gönderin</h3>
-          <form action="#" method="POST" id="contactForm">
+          <form action="https://formspree.io/f/mqeybbov" method="POST" id="contactForm">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Ad Soyad *</label>
@@ -267,17 +267,11 @@
     menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
 
-    // Simple form handler
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    // Form submit handler
+    document.getElementById('contactForm').addEventListener('submit', function() {
       const btn = this.querySelector('button[type="submit"]');
-      btn.innerHTML = 'Gönderildi! <i class="fas fa-check"></i>';
-      btn.style.background = '#22c55e';
-      setTimeout(() => {
-        btn.innerHTML = 'Mesaj Gönder <i class="fas fa-paper-plane"></i>';
-        btn.style.background = '';
-        this.reset();
-      }, 3000);
+      btn.innerHTML = 'Gönderiliyor... <i class="fas fa-spinner fa-spin"></i>';
+      btn.disabled = true;
     });
   </script>
 </body>
