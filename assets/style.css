@@ -99,6 +99,14 @@ p {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  gap: 16px;
+  position: relative;
+}
+
+.header nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
@@ -145,13 +153,18 @@ p {
 
 /* Language Switcher */
 .lang-switch {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: 8px;
   padding: 4px;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid rgba(201, 168, 76, 0.4);
   border-radius: 6px;
+  z-index: 1001;
+  background: rgba(10, 10, 10, 0.9);
 }
 
 .lang-switch a {
@@ -161,6 +174,7 @@ p {
   font-weight: 600;
   color: var(--gray);
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .lang-switch a:hover {
@@ -1146,6 +1160,13 @@ section {
     display: flex;
   }
 
+  .lang-switch {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -1174,6 +1195,62 @@ section {
   section {
     padding: 60px 0;
   }
+}
+
+/* =============================================
+   RTL (Arabic) Support
+   ============================================= */
+[dir="rtl"] {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+  font-family: 'Noto Sans Arabic', 'Playfair Display', serif;
+}
+
+[dir="rtl"] .nav-links a::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .lang-switch {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+[dir="rtl"] .hero::before {
+  right: auto;
+  left: -30%;
+}
+
+[dir="rtl"] .service-detail-content ul li {
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+[dir="rtl"] .service-detail-content ul li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .about-feature {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-info-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .social-links {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .process-grid::before {
+  background: linear-gradient(270deg, transparent, var(--gold), transparent);
 }
 
 @media (max-width: 480px) {
