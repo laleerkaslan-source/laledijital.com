@@ -1,11 +1,16 @@
 {
-  "name": "Lale Dijital",
+  "name": "Lale Dijital - Dijitale Açılan Kapınız",
   "short_name": "Lale Dijital",
+  "description": "Profesyonel web tasarım, SEO, dijital pazarlama ve yapay zeka çözümleri.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "categories": ["business", "technology"],
+  "lang": "tr",
   "icons": [
-    {"src": "/assets/images/icon-192x192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "/assets/images/icon-512x512.png", "sizes": "512x512", "type": "image/png"}
+    {"src": "/assets/images/icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/assets/images/icon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
   ],
   "theme_color": "#0a0a0a",
-  "background_color": "#0a0a0a",
-  "display": "standalone"
+  "background_color": "#0a0a0a"
 }
