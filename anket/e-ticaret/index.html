@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Ticaret Sitesi Bilgi Formu | Lale Dijital</title>
+  <meta name="description" content="Online mağazanızı kurabilmemiz için ihtiyaç duyduğumuz bilgileri bu kısa formla paylaşabilirsiniz.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:title" content="E-Ticaret Sitesi Bilgi Formu | Lale Dijital">
+  <meta property="og:description" content="Online mağazanız için ihtiyaç duyduğumuz bilgiler. Yaklaşık 10 dakika sürer.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:image" content="https://laledijital.com/assets/images/og-image.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    .q-top {
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 18px 0;
+    }
+    .q-top .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .q-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .q-top-contact { font-size: 0.9rem; white-space: nowrap; }
+
+    .q-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    .q-intro { text-align: center; margin-bottom: 36px; }
+    .q-intro h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-bottom: 14px; }
+    .q-intro p { max-width: 560px; margin: 0 auto 8px; }
+    .q-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 22px;
+      margin-top: 18px;
+      color: var(--gray);
+      font-size: 0.88rem;
+    }
+    .q-meta i { color: var(--gold); margin-right: 6px; }
+
+    .q-progress { margin-bottom: 20px; }
+    .q-progress-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .q-progress-head strong { color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .q-bar { height: 4px; background: var(--dark-soft); border-radius: 4px; overflow: hidden; }
+    .q-bar span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.35s ease; }
+
+    .q-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .q-step { display: none; border: 0; min-width: 0; }
+    .q-step.active { display: block; }
+    .q-step h2 { font-size: clamp(1.4rem, 3.4vw, 1.8rem); margin-bottom: 6px; }
+    .q-step > p { color: var(--gray); margin-bottom: 28px; font-size: 0.95rem; }
+
+    .q-field { margin-bottom: 26px; }
+    .q-label {
+      display: block;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .q-label .req { color: var(--gold); margin-left: 3px; }
+    .q-hint { font-size: 0.85rem; color: var(--gray); margin: 0 0 10px; line-height: 1.5; }
+    .q-kind { font-size: 0.78rem; color: var(--gray); font-weight: 400; margin-left: 8px; }
+
+    .q-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+
+    .q-input {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid rgba(201, 168, 76, 0.18);
+      border-radius: 10px;
+      color: var(--white);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color var(--transition);
+    }
+    .q-input::placeholder { color: #666; }
+    .q-input:focus { outline: none; border-color: var(--gold); }
+    textarea.q-input { min-height: 96px; resize: vertical; line-height: 1.6; }
+
+    .q-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .q-chip { position: relative; cursor: pointer; }
+    .q-chip input {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+    .q-chip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 9px 16px;
+      background: var(--bg);
+      border: 1px solid rgba(201, 168, 76, 0.18);
+      border-radius: 10px;
+      color: var(--gray-light);
+      font-size: 0.93rem;
+      line-height: 1.35;
+      transition: all 0.15s ease;
+    }
+    .q-chip span::before {
+      content: "";
+      flex: none;
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #555;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .q-chip input[type="radio"] + span::before { border-radius: 50%; }
+    .q-chip:hover span { border-color: rgba(201, 168, 76, 0.5); }
+    .q-chip input:checked + span {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+    .q-chip input:checked + span::before {
+      background: var(--gold);
+      border-color: var(--gold);
+      box-shadow: inset 0 0 0 3px var(--dark-card);
+    }
+    .q-chip input:focus-visible + span { outline: 2px solid var(--gold-light); outline-offset: 2px; }
+    .q-other { margin-top: 10px; }
+
+    .q-consent .q-chip span { align-items: flex-start; }
+    .q-consent .q-chip span::before { margin-top: 2px; }
+
+    .q-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+    .q-nav .btn[hidden] { display: none; }
+    .q-nav .q-next { margin-left: auto; }
+    .q-saved { text-align: center; color: var(--gray); font-size: 0.82rem; margin-top: 16px; }
+
+    .q-error {
+      display: none;
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px solid rgba(220, 90, 70, 0.5);
+      background: rgba(220, 90, 70, 0.08);
+      border-radius: 10px;
+      color: var(--white);
+      font-size: 0.93rem;
+    }
+    .q-error.show { display: block; }
+    .q-error a { font-weight: 600; }
+
+    .q-done { display: none; text-align: center; padding: 20px 0; }
+    .q-done.show { display: block; }
+    .q-done i.big { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
+    .q-done h2 { margin-bottom: 14px; font-size: clamp(1.5rem, 4vw, 2rem); }
+    .q-done p { max-width: 480px; margin: 0 auto 12px; }
+    .q-done .btn-group { justify-content: center; margin-top: 24px; }
+
+    .q-foot { text-align: center; color: var(--gray); font-size: 0.82rem; margin-top: 28px; }
+
+    @media (max-width: 640px) {
+      .q-wrap { padding: 32px 16px 72px; }
+      .q-card { padding: 24px 18px; }
+      .q-row { grid-template-columns: 1fr; }
+      .q-top-contact span { display: none; }
+      .q-chip span { font-size: 0.9rem; padding: 9px 13px; }
+      .q-nav .btn { padding: 14px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="q-top">
+    <div class="container">
+      <a href="/" class="q-brand">
+        <img src="/assets/images/logo.png" alt="" width="40" height="40">
+        Lale Dijital
+      </a>
+      <a class="q-top-contact" href="https://wa.me/905063977306" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> <span>Sorunuz mu var?</span> +90 506 397 7306
+      </a>
+    </div>
+  </header>
+
+  <main class="q-wrap">
+    <div class="q-intro" id="intro">
+      <span class="section-label">E-Ticaret Projesi</span>
+      <h1>Online mağazanızı birlikte planlayalım</h1>
+      <p>Size en doğru teklifi ve çalışma planını hazırlayabilmemiz için aşağıdaki soruları yanıtlamanızı rica ediyoruz.</p>
+      <div class="q-meta">
+        <span><i class="far fa-clock"></i>Yaklaşık 10 dakika</span>
+        <span><i class="far fa-circle-check"></i>Bilmediklerinizi boş bırakabilirsiniz</span>
+        <span><i class="far fa-floppy-disk"></i>Yanıtlarınız bu cihazda otomatik saklanır</span>
+      </div>
+    </div>
+
+    <div class="q-progress" id="progress">
+      <div class="q-progress-head">
+        <strong id="stepCount"></strong>
+        <span id="stepName"></span>
+      </div>
+      <div class="q-bar"><span id="bar"></span></div>
+    </div>
+
+    <div class="q-card">
+      <noscript>
+        <p>Bu form için tarayıcınızda JavaScript açık olmalıdır. Dilerseniz bilgilerinizi
+        <a href="mailto:lale@laledijital.com">lale@laledijital.com</a> adresine veya
+        <a href="https://wa.me/905063977306">WhatsApp</a> üzerinden de iletebilirsiniz.</p>
+      </noscript>
+
+      <form id="survey" novalidate>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <div id="steps"></div>
+
+        <div class="q-error" id="error" role="alert"></div>
+
+        <div class="q-nav">
+          <button type="button" class="btn btn-outline" id="back" hidden><i class="fas fa-arrow-left"></i> Geri</button>
+          <button type="submit" class="btn btn-primary q-next" id="next">Devam <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+
+      <div class="q-done" id="done" tabindex="-1">
+        <i class="fas fa-circle-check big"></i>
+        <h2>Teşekkür ederiz, yanıtlarınız bize ulaştı</h2>
+        <p>Bilgilerinizi inceleyip en kısa sürede teklifimizle birlikte size dönüş yapacağız.</p>
+        <p>Logo, ürün fotoğrafı veya ürün listesi gibi dosyalarınız varsa WhatsApp ya da e-posta ile gönderebilirsiniz.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://wa.me/905063977306" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp'tan gönder</a>
+          <a class="btn btn-outline" href="mailto:lale@laledijital.com"><i class="far fa-envelope"></i> E-posta gönder</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="q-saved" id="saved" hidden><i class="far fa-floppy-disk"></i> Yanıtlarınız kaydedildi; sayfayı kapatıp daha sonra aynı cihazdan devam edebilirsiniz.</p>
+    <p class="q-foot">Paylaştığınız bilgiler yalnızca teklif ve proje planlaması için kullanılır, üçüncü kişilerle paylaşılmaz.</p>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var ENDPOINT = 'https://formspree.io/f/mqeybbov';
+    var WHATSAPP = '905063977306';
+    var STORE_KEY = 'ld-anket-eticaret-v1';
+
+    // type: text | tel | email | textarea | radio | check | consent
+    // half: yan yana iki sütun · other: "Diğer" metin kutusu ekler
+    var SECTIONS = [
+      {
+        title: 'Siz ve işletmeniz',
+        desc: 'Önce sizi ve işletmenizi tanıyalım.',
+        fields: [
+          { label: 'Adınız soyadınız', type: 'text', required: true, half: true, autocomplete: 'name' },
+          { label: 'Marka / mağaza adı', type: 'text', required: true, half: true, id: 'brand', autocomplete: 'organization' },
+          { label: 'Telefon (WhatsApp)', type: 'tel', required: true, half: true, placeholder: '05XX XXX XX XX', autocomplete: 'tel' },
+          { label: 'E-posta', type: 'email', required: true, half: true, id: 'email', placeholder: 'ornek@email.com', autocomplete: 'email' },
+          { label: 'Bulunduğunuz şehir', type: 'text', autocomplete: 'address-level1' },
+          { label: 'Şirket durumunuz', type: 'radio',
+            hint: 'Kredi kartıyla online ödeme alabilmek (sanal POS) için vergi levhası gerekir.',
+            options: ['Şahıs şirketim var', 'Limited / Anonim şirketim var', 'Henüz şirketim yok, kurulacak'] },
+          { label: 'Şu anda nerelerde satış yapıyorsunuz?', type: 'check', other: true,
+            options: ['Fiziksel mağaza', 'Instagram', 'WhatsApp', 'Trendyol', 'Hepsiburada', 'N11', 'Henüz satış yapmıyorum'] }
+        ]
+      },
+      {
+        title: 'Alan adı ve marka kimliği',
+        desc: 'Sitenizin adresi ve görünümüyle ilgili tercihleriniz.',
+        fields: [
+          { label: 'İstediğiniz site adresi (alan adı)', type: 'textarea',
+            hint: 'Birkaç alternatif yazabilirsiniz. Uygun olanı kontrol edip sizin adınıza biz satın alacağız.',
+            placeholder: 'ör. markaadi.com, markaadigiyim.com' },
+          { label: 'Uzantı tercihiniz', type: 'check',
+            options: ['.com', '.com.tr', '.shop / .store', 'Fark etmez, siz önerin'] },
+          { label: 'Logonuz var mı?', type: 'radio',
+            options: ['Evet, hazır', 'Var ama yenilenmesini istiyorum', 'Yok, tasarlanmasını istiyorum'] },
+          { label: 'Markanızın renkleri veya sevdiğiniz renkler', type: 'text', placeholder: 'ör. siyah, krem, pudra' },
+          { label: 'Sitenizin genel havası nasıl olsun?', type: 'check',
+            options: ['Sade ve minimal', 'Lüks ve şık', 'Genç ve renkli', 'Klasik', 'Sportif', 'Sıcak ve samimi'] },
+          { label: 'Beğendiğiniz alışveriş siteleri', type: 'textarea',
+            hint: 'Tasarımını veya kullanımını beğendiğiniz 2-3 site yazarsanız beklentinizi daha iyi anlarız.',
+            placeholder: 'Site adresleri ve neyi beğendiğiniz' },
+          { label: 'Sosyal medya hesaplarınız', type: 'text', placeholder: 'ör. instagram.com/markaadi' }
+        ]
+      },
+      {
+        title: 'Ürünleriniz',
+        desc: 'Kategori yapısını ve ürün yükleme işini planlayabilmemiz için.',
+        fields: [
+          { label: 'Hangi ürün gruplarını satacaksınız?', type: 'check', other: true,
+            options: ['Kadın giyim', 'Erkek giyim', 'Kız çocuk', 'Erkek çocuk', 'Bebek', 'Ayakkabı', 'Çanta ve aksesuar', 'İç giyim / pijama'] },
+          { label: 'Alt kategoriler', type: 'textarea',
+            hint: 'Menüde görünmesini istediğiniz başlıklar. Kabaca yazmanız yeterli.',
+            placeholder: 'ör. Kadın: elbise, bluz, pantolon, dış giyim\nErkek: gömlek, tişört, pantolon\nÇocuk: takım, eşofman' },
+          { label: 'Site açılırken yaklaşık kaç ürün olacak?', type: 'radio',
+            options: ['1 – 50', '51 – 200', '201 – 500', '501 – 1000', '1000 üzeri'] },
+          { label: 'Ürünlerde hangi seçenekler olacak?', type: 'check', other: true,
+            options: ['Beden', 'Renk', 'Yaş grubu (çocuk)', 'Kalıp / boy', 'Seçenek olmayacak'] },
+          { label: 'Ürünleriniz nereden geliyor?', type: 'check',
+            options: ['Kendi üretimim', 'Toptancıdan alıyorum', 'Farklı markaların ürünlerini satıyorum'] },
+          { label: 'Ürün fotoğraflarınızın durumu', type: 'radio',
+            options: ['Profesyonel çekimler hazır', 'Telefonla çekilmiş fotoğraflar var', 'Tedarikçinin fotoğraflarını kullanacağım', 'Fotoğraf yok, çekim desteği istiyorum'] },
+          { label: 'Ürün bilgileri (ad, fiyat, açıklama) hazır mı?', type: 'radio',
+            options: ['Excel / liste olarak hazır', 'Kısmen hazır', 'Hazır değil'] },
+          { label: 'Ürünleri siteye kim yükleyecek?', type: 'radio',
+            options: ['Hepsini Lale Dijital yüklesin', 'İlk ürünleri siz yükleyin, sonrasını ben eklerim', 'Ben yüklerim, eğitim yeterli'] },
+          { label: 'Stok takibini nasıl yapıyorsunuz?', type: 'radio', other: true, otherPlaceholder: 'Kullandığınız programın adı (varsa)',
+            options: ['Barkodlu stok programı', 'Excel', 'Defter / elle', 'Stok takibi yapmıyorum'] }
+        ]
+      },
+      {
+        title: 'Ödeme ve fatura',
+        desc: 'Müşterilerinizin nasıl ödeme yapacağını belirleyelim.',
+        fields: [
+          { label: 'Hangi ödeme yöntemleri olsun?', type: 'check',
+            options: ['Kredi / banka kartı', 'Karta taksit', 'Havale / EFT', 'Kapıda nakit ödeme', 'Kapıda kartla ödeme'] },
+          { label: 'Sanal POS (online kart tahsilatı) hesabınız var mı?', type: 'radio',
+            options: ['Evet, var', 'Yok, başvuruda destek istiyorum', 'Ne olduğunu bilmiyorum, bilgi verin'] },
+          { label: 'Varsa hangisi?', type: 'check', other: true,
+            options: ['iyzico', 'PayTR', 'Param', 'Banka sanal POS\'u'] },
+          { label: 'Faturalarınızı nasıl kesiyorsunuz?', type: 'radio', other: true, otherPlaceholder: 'Kullandığınız e-fatura programı (varsa)',
+            options: ['e-Fatura / e-Arşiv', 'Kağıt fatura', 'Bilmiyorum, muhasebecime soracağım'] }
+        ]
+      },
+      {
+        title: 'Kargo, teslimat ve iade',
+        desc: 'Siparişlerin müşteriye nasıl ulaşacağını planlayalım.',
+        fields: [
+          { label: 'Anlaşmalı olduğunuz kargo firması var mı?', type: 'check', other: true,
+            options: ['Yurtiçi Kargo', 'Aras Kargo', 'MNG Kargo', 'PTT Kargo', 'Sürat Kargo', 'Hepsijet', 'Anlaşmam yok, öneri istiyorum'] },
+          { label: 'Kargo ücreti nasıl olsun?', type: 'radio', other: true, otherPlaceholder: 'Ücretsiz kargo limiti veya sabit kargo ücreti (ör. 1.500 TL üzeri ücretsiz)',
+            options: ['Her siparişte müşteri öder', 'Belirli tutarın üzerinde ücretsiz', 'Her zaman ücretsiz', 'Kararsızım, öneri istiyorum'] },
+          { label: 'Nerelere gönderim yapacaksınız?', type: 'radio',
+            options: ['Sadece Türkiye', 'Türkiye ve yurt dışı'] },
+          { label: 'Mağazadan teslim alma seçeneği olsun mu?', type: 'radio',
+            options: ['Evet', 'Hayır'] },
+          { label: 'İade ve değişim politikanız', type: 'radio',
+            hint: 'İnternet satışlarında müşterinin yasal olarak 14 gün cayma hakkı bulunur.',
+            options: ['14 gün iade ve değişim', 'Daha uzun süre tanımak istiyorum', 'Kararsızım, öneri istiyorum'] },
+          { label: 'İade kargo ücretini kim karşılasın?', type: 'radio',
+            options: ['Müşteri', 'Biz karşılarız', 'Kararsızım'] }
+        ]
+      },
+      {
+        title: 'Site özellikleri',
+        desc: 'Sitenizde olmasını istediklerinizi işaretleyin.',
+        fields: [
+          { label: 'İstediğiniz özellikler', type: 'check', other: true,
+            options: ['Üye olmadan alışveriş', 'Üyelik ve sipariş takibi', 'İndirim kuponu / kampanya', 'Favorilere ekleme', 'Ürün yorumları ve puanlama', 'Beden tablosu', 'WhatsApp destek butonu', 'Stoğa gelince haber ver', 'Hediye paketi seçeneği', 'Benzer ürün / kombin önerisi', 'Sipariş SMS bildirimi', 'E-bülten ve kampanya e-postaları', 'Instagram gönderileri', 'Blog'] },
+          { label: 'Site hangi dillerde olsun?', type: 'check', other: true,
+            options: ['Türkçe', 'İngilizce', 'Arapça', 'Rusça'] },
+          { label: 'Pazaryeri entegrasyonu ister misiniz?', type: 'check',
+            hint: 'Ürün ve stoklarınızın siteyle pazaryerleri arasında eşitlenmesi.',
+            options: ['Trendyol', 'Hepsiburada', 'N11', 'Amazon', 'Çiçeksepeti', 'İstemiyorum'] },
+          { label: 'Ürünleriniz Instagram / Facebook Mağaza ve Google Alışveriş\'te de görünsün mü?', type: 'radio',
+            options: ['Evet', 'Hayır', 'Bilgi almak istiyorum'] }
+        ]
+      },
+      {
+        title: 'Süreç ve sonrası',
+        desc: 'Son adım: takvim, yönetim ve eklemek istedikleriniz.',
+        fields: [
+          { label: 'Sitenin ne zaman yayında olmasını istiyorsunuz?', type: 'text', placeholder: 'ör. Ocak ortası, sezon açılışına kadar' },
+          { label: 'Siparişleri ve ürünleri kim yönetecek?', type: 'radio',
+            options: ['Ben', 'Bir çalışanım', 'Birden fazla kişi'] },
+          { label: 'Yasal metinler (mesafeli satış sözleşmesi, KVKK, iade koşulları)', type: 'radio',
+            options: ['Hazır, göndereceğim', 'Siz hazırlayın'] },
+          { label: 'Kurumsal e-posta adresi ister misiniz?', type: 'radio', other: true, otherPlaceholder: 'Kaç adet ve hangi adlarla? (ör. info@, siparis@)',
+            hint: 'ör. info@markaadi.com',
+            options: ['Evet', 'Hayır'] },
+          { label: 'Site yayına girdikten sonra hangi hizmetlerle ilgilenirsiniz?', type: 'check',
+            options: ['Aylık bakım ve teknik destek', 'SEO (Google\'da üst sıralar)', 'Google reklamları', 'Instagram / Facebook reklamları', 'Sosyal medya yönetimi', 'Ürün fotoğraf çekimi', 'Şimdilik sadece site'] },
+          { label: 'Bu proje için düşündüğünüz bütçe', type: 'text', hint: 'İsteğe bağlı. Belirtirseniz size uygun kapsamı daha net önerebiliriz.' },
+          { label: 'Eklemek istedikleriniz', type: 'textarea', placeholder: 'Sormadığımız ama bilmemizi istediğiniz her şey' },
+          { label: 'Onay', type: 'consent', required: true,
+            text: 'Paylaştığım bilgilerin teklif hazırlanması ve benimle iletişime geçilmesi amacıyla Lale Dijital tarafından kullanılmasını kabul ediyorum.' }
+        ]
+      }
+    ];
+
+    var form = document.getElementById('survey');
+    var stepsEl = document.getElementById('steps');
+    var backBtn = document.getElementById('back');
+    var nextBtn = document.getElementById('next');
+    var errorEl = document.getElementById('error');
+    var current = 0;
+    var FIELDS = []; // düz liste: { f, name, n }
+
+    function el(tag, attrs, children) {
+      var node = document.createElement(tag);
+      Object.keys(attrs || {}).forEach(function (k) {
+        if (attrs[k] === false || attrs[k] == null) return;
+        if (k === 'text') node.textContent = attrs[k];
+        else if (k === 'class') node.className = attrs[k];
+        else node.setAttribute(k, attrs[k] === true ? '' : attrs[k]);
+      });
+      (children || []).forEach(function (c) { if (c) node.appendChild(c); });
+      return node;
+    }
+
+    function chip(type, name, value, required) {
+      return el('label', { class: 'q-chip' }, [
+        el('input', { type: type, name: name, value: value, required: required }),
+        el('span', { text: value })
+      ]);
+    }
+
+    function renderField(f, name) {
+      var wrap = el('div', { class: 'q-field' + (f.type === 'consent' ? ' q-consent' : '') });
+      var isGroup = f.type === 'radio' || f.type === 'check';
+      var labelId = name + '_l';
+
+      if (f.type !== 'consent') {
+        var label = el(isGroup ? 'div' : 'label', { class: 'q-label', id: labelId, for: isGroup ? null : name, text: f.label });
+        if (f.required) label.appendChild(el('span', { class: 'req', text: '*', 'aria-hidden': 'true' }));
+        if (f.type === 'check') label.appendChild(el('span', { class: 'q-kind', text: 'birden fazla seçebilirsiniz' }));
+        wrap.appendChild(label);
+      }
+      if (f.hint) wrap.appendChild(el('p', { class: 'q-hint', text: f.hint }));
+
+      if (isGroup) {
+        var group = el('div', { class: 'q-chips', role: f.type === 'radio' ? 'radiogroup' : 'group', 'aria-labelledby': labelId });
+        f.options.forEach(function (o) {
+          group.appendChild(chip(f.type === 'radio' ? 'radio' : 'checkbox', name, o, false));
+        });
+        wrap.appendChild(group);
+      } else if (f.type === 'consent') {
+        wrap.appendChild(el('div', { class: 'q-chips' }, [chip('checkbox', name, f.text, true)]));
+        wrap.querySelector('input').value = 'Evet';
+      } else if (f.type === 'textarea') {
+        wrap.appendChild(el('textarea', { class: 'q-input', id: name, name: name, placeholder: f.placeholder, required: f.required }));
+      } else {
+        wrap.appendChild(el('input', { class: 'q-input', type: f.type, id: name, name: name, placeholder: f.placeholder, required: f.required, autocomplete: f.autocomplete }));
+      }
+
+      if (f.other) {
+        wrap.appendChild(el('input', {
+          class: 'q-input q-other', type: 'text', name: name + '_other',
+          placeholder: f.otherPlaceholder || 'Diğer (yazınız)',
+          'aria-label': f.label + ' – ' + (f.otherPlaceholder || 'diğer')
+        }));
+      }
+      return wrap;
+    }
+
+    function render() {
+      var n = 0;
+      SECTIONS.forEach(function (s, si) {
+        var step = el('fieldset', { class: 'q-step', 'data-step': si }, [
+          el('h2', { text: s.title, tabindex: '-1' }),
+          el('p', { text: s.desc })
+        ]);
+        var row = null;
+        s.fields.forEach(function (f, fi) {
+          var name = 'q' + (si + 1) + '_' + (fi + 1);
+          FIELDS.push({ f: f, name: name, n: ++n });
+          var node = renderField(f, name);
+          if (f.half) {
+            if (!row) { row = el('div', { class: 'q-row' }); step.appendChild(row); }
+            row.appendChild(node);
+          } else {
+            row = null;
+            step.appendChild(node);
+          }
+        });
+        stepsEl.appendChild(step);
+      });
+    }
+
+    function show(i, focus) {
+      current = i;
+      var steps = stepsEl.children;
+      for (var k = 0; k < steps.length; k++) steps[k].classList.toggle('active', k === i);
+      var last = i === SECTIONS.length - 1;
+      backBtn.hidden = i === 0;
+      nextBtn.innerHTML = last ? 'Gönder <i class="fas fa-paper-plane"></i>' : 'Devam <i class="fas fa-arrow-right"></i>';
+      document.getElementById('stepCount').textContent = 'Adım ' + (i + 1) + ' / ' + SECTIONS.length;
+      document.getElementById('stepName').textContent = SECTIONS[i].title;
+      document.getElementById('bar').style.width = ((i + 1) / SECTIONS.length * 100) + '%';
+      errorEl.classList.remove('show');
+      if (focus) {
+        document.getElementById('progress').scrollIntoView({ block: 'start' });
+        steps[i].querySelector('h2').focus({ preventScroll: true });
+      }
+    }
+
+    function validStep(i) {
+      var inputs = stepsEl.children[i].querySelectorAll('input, textarea');
+      for (var k = 0; k < inputs.length; k++) {
+        if (!inputs[k].checkValidity()) { inputs[k].reportValidity(); return false; }
+      }
+      return true;
+    }
+
+    function valueOf(item) {
+      var f = item.f, parts = [];
+      if (f.type === 'radio' || f.type === 'check' || f.type === 'consent') {
+        form.querySelectorAll('input[name="' + item.name + '"]:checked').forEach(function (c) { parts.push(c.value); });
+      } else {
+        var v = form.elements[item.name].value.trim();
+        if (v) parts.push(v);
+      }
+      if (f.other) {
+        var o = form.elements[item.name + '_other'].value.trim();
+        if (o) parts.push((f.otherPlaceholder ? 'Not: ' : 'Diğer: ') + o);
+      }
+      return parts.join(', ');
+    }
+
+    function answers() {
+      var list = [];
+      FIELDS.forEach(function (item) {
+        var v = valueOf(item);
+        if (v) list.push({ item: item, value: v });
+      });
+      return list;
+    }
+
+    // --- taslak kaydetme ---
+    function save() {
+      var state = { step: current, v: {} };
+      Array.prototype.forEach.call(form.elements, function (inp) {
+        if (!inp.name || inp.name === '_gotcha') return;
+        if (inp.type === 'checkbox' || inp.type === 'radio') {
+          if (inp.checked) (state.v[inp.name] = state.v[inp.name] || []).push(inp.value);
+        } else if (inp.value) {
+          state.v[inp.name] = inp.value;
+        }
+      });
+      try {
+        localStorage.setItem(STORE_KEY, JSON.stringify(state));
+        document.getElementById('saved').hidden = false;
+      } catch (e) {}
+    }
+
+    function restore() {
+      var state;
+      try { state = JSON.parse(localStorage.getItem(STORE_KEY)); } catch (e) {}
+      if (!state || !state.v) return;
+      Array.prototype.forEach.call(form.elements, function (inp) {
+        var v = state.v[inp.name];
+        if (v == null) return;
+        if (inp.type === 'checkbox' || inp.type === 'radio') inp.checked = v.indexOf(inp.value) !== -1;
+        else inp.value = v;
+      });
+      if (state.step > 0 && state.step < SECTIONS.length) show(state.step, false);
+      document.getElementById('saved').hidden = false;
+    }
+
+    // --- gönderim ---
+    function fail(list) {
+      var text = 'E-ticaret sitesi bilgi formu\n\n' + list.map(function (a) {
+        return a.item.f.label + ': ' + a.value;
+      }).join('\n');
+      errorEl.innerHTML = '';
+      errorEl.appendChild(document.createTextNode('Yanıtlarınız şu anda gönderilemedi. Bilgileriniz kaybolmadı; birkaç dakika sonra tekrar deneyebilir ya da tek dokunuşla '));
+      errorEl.appendChild(el('a', { href: 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text), target: '_blank', rel: 'noopener noreferrer', text: 'WhatsApp üzerinden gönderebilirsiniz' }));
+      errorEl.appendChild(document.createTextNode('.'));
+      errorEl.classList.add('show');
+    }
+
+    function submit() {
+      var list = answers();
+      var byId = {};
+      FIELDS.forEach(function (item) { if (item.f.id) byId[item.f.id] = valueOf(item); });
+
+      var data = { _subject: 'E-ticaret anketi: ' + (byId.brand || 'yeni yanıt'), email: byId.email };
+      if (form.elements._gotcha.value) data._gotcha = form.elements._gotcha.value;
+      list.forEach(function (a) {
+        var no = (a.item.n < 10 ? '0' : '') + a.item.n;
+        data[no + ') ' + a.item.f.label] = a.value;
+      });
+
+      nextBtn.disabled = true;
+      nextBtn.innerHTML = 'Gönderiliyor... <i class="fas fa-spinner fa-spin"></i>';
+      errorEl.classList.remove('show');
+
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+        form.hidden = true;
+        document.getElementById('progress').hidden = true;
+        document.getElementById('saved').hidden = true;
+        var done = document.getElementById('done');
+        done.classList.add('show');
+        document.getElementById('intro').scrollIntoView({ block: 'start' });
+        done.focus({ preventScroll: true });
+      }).catch(function () {
+        nextBtn.disabled = false;
+        nextBtn.innerHTML = 'Tekrar dene <i class="fas fa-rotate-right"></i>';
+        fail(list);
+      });
+    }
+
+    render();
+    show(0, false);
+    restore();
+
+    form.addEventListener('input', save);
+    form.addEventListener('change', save);
+    backBtn.addEventListener('click', function () { show(current - 1, true); save(); });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validStep(current)) return;
+      if (current < SECTIONS.length - 1) { show(current + 1, true); save(); }
+      else submit();
+    });
+  })();
+  </script>
+</body>
+</html>
